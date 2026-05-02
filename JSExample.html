@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> JS Function Examples </title>
+<script src="Myjs.js"></script>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p> This is a paragraph </p>
+<p id="change"> This is a paragraph that will change </p>
+<img id="light" src="light_off.png" />
+<button onClick="changeColor()" > Change Color </button>
+<button onClick="changeFont()" > Change Font Size </button>
+<button onClick="changeFontBack()" > Change back Font Size</button>
+<button onClick="turnOnLight()"> Turn On </button>
+<button onClick="turnOffLight()"> Turn Off </button>
+<br>
+<img id="myImage" onclick="changeImage()" src="pic_bulboff.gif" width="100" height="180">
+
+<p>Click the light bulb to turn on/off the light.</p>
+
+
+<script>
+function changeColor(){
+document.getElementById("change").style.color= "blue";
+}
+function changeFont(){
+document.getElementById("change").style.fontSize= "35px";
+}
+function changeFontBack(){
+document.getElementById("change").style.fontSize= "16px";
+}
+
+function turnOnLight(){
+document.getElementById("light").src="light_on.png"
+}
+
+function turnOffLight(){
+document.getElementById("light").src="light_off.png"
+}
+function changeImage() {
+  var image = document.getElementById('myImage');
+  if (image.src.match("pic_bulbon")) {
+    image.src = "pic_bulboff.gif";
+  } else {
+    image.src = "pic_bulbon.gif";
+  }
+}
+
+</script>
+
+</body>
+</html>
